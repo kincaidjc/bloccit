@@ -17,6 +17,10 @@ posts = Post.all
     )
 end
 
+Post.find_or_create_by(title: "The only non random title", body: "With real words in the body")
+
+Comment.find_or_create_by(body: "This is my comment with real words", post_id: 101)
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created" 
